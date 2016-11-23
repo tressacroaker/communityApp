@@ -1,4 +1,4 @@
-ReactDOM.render(
-  <ItemPage/>,
-  document.getElementById('content')
-);
+// ReactDOM.render(
+//   <ItemPage/>,
+//   document.getElementById('content')
+// );

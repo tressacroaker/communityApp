@@ -5,9 +5,7 @@ Login = React.createClass({
       url: "/login",
       data: user,
       success: function(response){
-        if(response.data.type == "donor"){
-
-        }
+        console.log(response);
       }
     });
   },
