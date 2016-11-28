@@ -1,4 +1,17 @@
 LoginPage = React.createClass({
+  getCurrentUser: function(){
+    $.ajax({
+      method: "GET",
+      url: "/current",
+      success: function(response){
+        console.log(response);
+        return response.data;
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.error(status, err.toString)
+      }.bind(this)
+    });
+  },
   postLogin: function(user){
     var user = {
       email: this.state.email,
