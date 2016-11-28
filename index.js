@@ -2,13 +2,13 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var cors = require('cors');
 var mongoose = require('mongoose');
-const session = require('express-session');
-const passport = require('passport');
+var session = require('express-session');
+var passport = require('passport');
 
 
 var itemCtrl = require('./controllers/itemCtrl.js')
-const userCtrl = require('./controllers/userCtrl');
-const config = require('./config/config');
+var userCtrl = require('./controllers/userCtrl');
+var config = require('./config/config');
 
 var app = express();
 

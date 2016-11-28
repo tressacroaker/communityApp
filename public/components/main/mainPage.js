@@ -9,9 +9,15 @@ MainPage = React.createClass({
           <Link to = '/itempage'>
             <button>ITEMS</button>
           </Link>
+          <Link to = '/login'>
+            <button>LOG IN</button>
+          </Link>
+          <Link to = '/createuser'>
+            <button>CREATE USER</button>
+          </Link>
         </header>
         {this.props.children}
       </div>
     );
   }
-})
+});
