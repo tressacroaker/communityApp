@@ -88,6 +88,7 @@ ItemPage = React.createClass({
     },
     render: function(){
         return (
+          <div>
             <div>
             <form onSubmit={this.postItem}>
                 <input onChange={this.updateNewItemName} type="text" placeholder="Name of Item"/>
@@ -98,7 +99,28 @@ ItemPage = React.createClass({
                 <input onChange={this.updateNewItemImage} type="text" placeholder="Image"/>
                 <button type="submit">Add New Item</button>
             </form>
-            <ItemList data={this.state.listOfItems} getItems={this.getItems}/>
+            </div>
+
+              {/* <ItemList data={this.state.listOfItems} getItems={this.getItems} /> */}
+              {/* <h1><ItemList data={this.state.listOfItems} getItems={this.getItems} /></h1> */}
+              <div className="cards">
+
+                {this.state.listOfItems.map(function(item){
+                  console.log(item)
+                  return(
+                    <div className="task">
+                      <div className="taskLeft">
+                      <img src={item.image}/></div>
+                      <div className="taskRight">
+                      <h4>{item.name}</h4>
+                      <h5>{item.description}</h5>
+                      <h5>{item.estimatedLabor}</h5>
+                      <h5>{item.estimatedCost}</h5>
+                      <h5>{item.dateCompleted}</h5></div>
+                    </div>
+                    )
+                })}
+              </div>
             </div>
         );
     }

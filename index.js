@@ -14,6 +14,7 @@ var app = express();
 
 require('./config/passport.js')(passport);
 
+//Passport and Bodyparser
 app.use(session(config));
 app.use(passport.initialize());
 app.use(passport.session());
