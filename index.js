@@ -25,7 +25,7 @@ app.use(express.static(__dirname + '/public'));
 
 //Post and Get
 // app.post('/login', passport.authenticate('local-signup'), userCtrl.login);
-app.post('/login', passport.authenticate('local',{
+app.post('/login', passport.authenticate('local-signup',{
   successRedirect: '/home',
   failureRedirect: '/failedLogin',
   failureFlash: true
