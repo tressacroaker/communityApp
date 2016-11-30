@@ -24,14 +24,14 @@ module.exports = function(passport){
   function(req, email, password, done){
     process.nextTick(function(){
       UserModel.findOne({'email': email}, function(err, user){
-        if (err) return done(err);
+        if (err) return res.send(err);
         if (user){
           if(user.validPassword(password)){
             console.log("Password correct. Log 'em in.");
-            return done(null, user);
+            return res.send(null, user);
           } else {
             console.log("Password incorrect. Go fly a kite.");
-            return done(null, false);
+            return res.send(null, false);
           }
         } else {
           var newUser = new UserModel(req.body);
@@ -39,7 +39,7 @@ module.exports = function(passport){
           newUser.password = newUser.generateHash(password);
           newUser.save(function(err){
             if(err)throw err;
-            return done(null, newUser);
+            return res.send(null, newUser);
           });
         }
       });
