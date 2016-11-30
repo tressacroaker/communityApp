@@ -24,22 +24,22 @@ module.exports = function(passport){
   function(req, email, password, done){
     process.nextTick(function(){
       UserModel.findOne({'email': email}, function(err, user){
-        if (err) return res.send(err);
+        if (err) return done(err);
         if (user){
           if(user.validPassword(password)){
             console.log("Password correct. Log 'em in.");
-            return res.send(null, user);
+            return done(null, user);
           } else {
             console.log("Password incorrect. Go fly a kite.");
-            return res.send(null, false);
+            return done(null, false);
           }
         } else {
           var newUser = new UserModel(req.body);
           newUser.email = email;
           newUser.password = newUser.generateHash(password);
           newUser.save(function(err){
-            if(err) res.send(err);
-            return res.send(null, newUser);
+            if(err)throw err;
+            return done(null, newUser);
           });
         }
       });
