@@ -20,7 +20,7 @@ LoginPage = React.createClass({
     $.ajax({
       method: "POST",
       url: "/login",
-      data: user
+      data: user,
       success: function(response){
         console.log(response);
       }.bind(this),
