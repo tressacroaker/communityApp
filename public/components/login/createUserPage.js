@@ -1,7 +1,7 @@
 CreateUserPage = React.createClass({
   render: function(){
     return(
-      <div>
+      <div className = "wrapper">
         <h4>What type of account would you like to create?</h4>
         <Link to = '/createdonor'>
           <button>DONOR</button>

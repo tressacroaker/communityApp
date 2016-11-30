@@ -54,7 +54,7 @@ LoginPage = React.createClass({
   },
   render: function(){
     return(
-      <div>
+      <div className = "wrapper">
         <form onSubmit={this.postLogin}>
           <input onChange={this.updateNewEmail} type="text" placeholder="Email"/>
           <input onChange={this.updateNewPassword} type="text" placeholder="Password"/>

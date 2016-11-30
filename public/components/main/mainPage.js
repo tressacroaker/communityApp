@@ -3,18 +3,29 @@ MainPage = React.createClass({
     return(
       <div>
         <header>
-          <Link to = '/home'>
-            <button>HOME</button>
-          </Link>
-          <Link to = '/itempage'>
-            <button>ITEMS</button>
-          </Link>
+          <div className="topHeader">
+          <p>teamFundable</p>
           <Link to = '/login'>
-            <button>LOG IN</button>
+            <button className="navButton">LOG IN</button>
           </Link>
           <Link to = '/createuser'>
-            <button>CREATE USER</button>
+            <button className="navButton">CREATE USER</button>
           </Link>
+        </div>
+          <div className="navHeader">
+          <Link to = '/home'>
+            <button className="navButton">Home</button>
+          </Link>
+          <Link to = '/itempage'>
+            <button className="navButton">Community Projects</button>
+          </Link>
+          <Link to = '/teampage'>
+            <button className="navButton">Community Teams</button>
+          </Link>
+          <Link to = '/matchpage'>
+            <button className="navButton">Help Fund A Project</button>
+          </Link>
+        </div>
         </header>
         {this.props.children}
       </div>

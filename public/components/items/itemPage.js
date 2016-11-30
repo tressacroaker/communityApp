@@ -88,7 +88,7 @@ ItemPage = React.createClass({
     },
     render: function(){
         return (
-          <div>
+          <div className = "wrapper">
             <div>
             <form onSubmit={this.postItem}>
                 <input onChange={this.updateNewItemName} type="text" placeholder="Name of Item"/>

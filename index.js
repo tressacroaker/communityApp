@@ -25,7 +25,7 @@ app.use(express.static(__dirname + '/public'));
 
 //Post and Get
 // app.post('/login', passport.authenticate('local-signup'), userCtrl.login);
-app.post('/login', passport.authenticate('local-signup',{
+app.post('/login', passport.authenticate('local',{
   successRedirect: '/home',
   failureRedirect: '/failedLogin',
   failureFlash: true
@@ -40,7 +40,9 @@ app.delete('/item/:id',itemCtrl.delete);
 
 
 
-mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connect(
+  "mongodb://localhost: 27017/communityDb");
+  //process.env.MONGOLAB_URI);
 mongoose.connection.once('open', function(){
     console.log("connected to mongo on 27017");
 });

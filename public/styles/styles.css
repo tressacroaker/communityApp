@@ -2,6 +2,28 @@ body {
   margin: 0;
 }
 
+/*Header*/
+header .topHeader{
+  width: 100vw;
+  height: 70px;
+  background-color: grey;
+  position: fixed;
+  top: 0px;
+}
+
+header .navHeader{
+  position: fixed;
+  background-color: lightgrey;
+  width: 100vw;
+  top: 70px;
+  height: 40px;
+}
+
+/*Home Page*/
+.wrapper {
+  margin-top: 120px;
+}
+
 /*Items Page*/
 .cards {
   width: 100vw;

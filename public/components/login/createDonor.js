@@ -60,7 +60,7 @@ CreateDonor = React.createClass({
   },
   render: function(){
     return(
-      <div>
+      <div className = "wrapper">
         <form onSubmit={this.postUser}>
           <input onChange={this.updateNewEmail} type="text" placeholder="Email Address"/>
           <input onChange={this.updateNewPassword} type="text" placeholder="Password"/>

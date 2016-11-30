@@ -9,6 +9,7 @@ ReactDOM.render(
       <Route path="createdonor" component={CreateDonor}/>
       <Route path="createneedwork" component={CreateNeedWork}/>
       <Route path="createteam" component={CreateTeam}/>
+      <Route path="teampage" component={TeamPage}/>
       <Route path="failedlogin" component={FailedLogin}/>
     </Route>
   </Router>,
