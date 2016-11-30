@@ -1,6 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-var cors = require('cors');
+// var cors = require('cors');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var passport = require('passport');
@@ -18,7 +18,7 @@ require('./config/passport.js')(passport);
 app.use(session(config));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(__dirname + '/public'));
@@ -35,11 +35,11 @@ app.delete('/item/:id',itemCtrl.delete);
 
 
 
-mongoose.connect("mongodb://localhost: 27017/communityDb");
+mongoose.connect(process.env.MONGOLAB_URI);
 mongoose.connection.once('open', function(){
     console.log("connected to mongo on 27017");
 });
 
-app.listen(8000, function(){
-    console.log('listening on port 8000');
+app.listen(process.env.PORT || 3000, function(){
+    console.log('listening on port 80 OR 3000');
 });

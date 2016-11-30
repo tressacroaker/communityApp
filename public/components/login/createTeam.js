@@ -1,12 +1,14 @@
-CreateHasHelp = React.createClass({
+CreateTeam = React.createClass({
     postUser: function(user){
       var user = {
         email: this.state.email,
         password: this.state.password,
-        name: this.state.name,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        teamName: this.state.teamName,
         company: this.state.company,
         website: this.state.website,
-        type: "hashelp"
+        type: "team"
       }
       $.ajax({
         method: "POST",
@@ -21,7 +23,9 @@ CreateHasHelp = React.createClass({
       return{
         email: "",
         password: "",
-        name: "",
+        firstName: "",
+        lastName: "",
+        teamName: "",
         company: "",
         website: ""
       };
@@ -36,9 +40,19 @@ CreateHasHelp = React.createClass({
         password: event.target.value
       });
     },
-    updateNewName: function(event){
+    updateNewFirstName: function(event){
       this.setState({
-        name: event.target.value
+        firstName: event.target.value
+      });
+    },
+    updateNewLastName: function(event){
+      this.setState({
+        lastName: event.target.value
+      });
+    },
+    updateNewTeamName: function(event){
+      this.setState({
+        teamName: event.target.value
       });
     },
     updateNewCompany: function(event){
@@ -57,7 +71,9 @@ CreateHasHelp = React.createClass({
           <form onSubmit={this.postUser}>
             <input onChange={this.updateNewEmail} type="text" placeholder="Email Address"/>
             <input onChange={this.updateNewPassword} type="text" placeholder="Password"/>
-            <input onChange={this.updateNewName} type="text" placeholder="Full Name"/>
+            <input onChange={this.updateNewFirstName} type="text" placeholder="First Name"/>
+            <input onChange={this.updateNewLastName} type="text" placeholder="Last Name"/>
+            <input onChange={this.updateNewTeamName} type="text" placeholder="Team Name"/>
             <input onChange={this.updateNewCompany} type="text" placeholder="Company Name"/>
             <input onChange={this.updateNewWebsite} type="text" placeholder="Website"/>
             <button type="submit">Submit</button>

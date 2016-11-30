@@ -9,8 +9,8 @@ CreateUserPage = React.createClass({
         <Link to = '/createneedwork'>
           <button>NEED WORK</button>
         </Link>
-        <Link to = '/createhashelp'>
-          <button>HAS HELP</button>
+        <Link to = '/createteam'>
+          <button>TEAM</button>
         </Link>
       </div>
     );

@@ -8,7 +8,7 @@ ReactDOM.render(
       <Route path="createuser" component={CreateUserPage}/>
       <Route path="createdonor" component={CreateDonor}/>
       <Route path="createneedwork" component={CreateNeedWork}/>
-      <Route path="createhashelp" component={CreateHasHelp}/>
+      <Route path="createteam" component={CreateTeam}/>
     </Route>
   </Router>,
   document.getElementById('content')

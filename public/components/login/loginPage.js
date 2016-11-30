@@ -20,11 +20,21 @@ LoginPage = React.createClass({
     $.ajax({
       method: "POST",
       url: "/login",
-      data: user,
+      data: user
       success: function(response){
         console.log(response);
-      }
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log("crash");
+        console.error(status, err.toString)
+      }.bind(this)
     });
+    // .then(function(res){
+    //   console.log("crash");
+    // })
+    // .catch(function (err) {
+    //   console.error(err);
+    // });
   },
   getInitialState: function(){
     return{
