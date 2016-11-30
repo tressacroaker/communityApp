@@ -38,7 +38,7 @@ module.exports = function(passport){
           newUser.email = email;
           newUser.password = newUser.generateHash(password);
           newUser.save(function(err){
-            if(err)throw err;
+            if(err) res.send(err);
             return res.send(null, newUser);
           });
         }
