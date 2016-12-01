@@ -6,7 +6,8 @@ var session = require('express-session');
 var passport = require('passport');
 
 
-var itemCtrl = require('./controllers/itemCtrl.js')
+var fundraiserCtrl = require('./controllers/fundraiserCtrl.js');
+var projectCtrl = require('./controllers/projectCtrl.js');
 var userCtrl = require('./controllers/userCtrl');
 var config = require('./config/config');
 
@@ -33,10 +34,15 @@ app.post('/login', passport.authenticate('local',{
 app.get('/logout', userCtrl.logout);
 app.get('/current', userCtrl.getMe);
 
-app.post('/item',itemCtrl.create);
-app.get('/item',itemCtrl.read);
-app.put('/item/:id',itemCtrl.update);
-app.delete('/item/:id',itemCtrl.delete);
+app.post('/project',projectCtrl.create);
+app.get('/project',projectCtrl.read);
+app.put('/project/:id',projectCtrl.update);
+app.delete('/project/:id',projectCtrl.delete);
+
+app.post('/fundraiser',fundraiserCtrl.create);
+app.get('/fundraiser',fundraiserCtrl.read);
+app.put('/fundraiser/:id',fundraiserCtrl.update);
+app.delete('/fundraiser/:id',fundraiserCtrl.delete);
 
 
 

@@ -1,9 +1,9 @@
-var ItemModel = require("./../models/itemModel.js");
+var FundraiserModel = require("./../models/fundraiserModel.js");
 var mongoose = require("mongoose");
 
 module.exports = {
     read: function(req, res){
-        ItemModel
+        FundraiserModel
         .find(req.query)
         .exec(function(err, result){
             if(err){
@@ -14,8 +14,8 @@ module.exports = {
         });
     },
     create: function(req, res){
-        var item = new ItemModel(req.body);
-        item
+        var fundraiser = new FundraiserModel(req.body);
+        fundraiser
         .save(function(err, result){
             if(err){
                 res.send(err)
@@ -25,7 +25,7 @@ module.exports = {
         });
     },
     update: function(req, res){
-        ItemModel
+        FundraiserModel
         .findByIdAndUpdate(req.params.id, req.body,function(err, result){
                 if(err){
                     res.send(err)
@@ -36,7 +36,7 @@ module.exports = {
 
     },
     delete: function(req, res){
-        ItemModel
+        FundraiserModel
         .findByIdAndRemove(req.params.id, req.body, function(err, result){
             if(err){
                     res.send(err)
@@ -45,5 +45,4 @@ module.exports = {
                 }
         });
     }
-
 };
