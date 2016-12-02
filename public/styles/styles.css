@@ -6,22 +6,72 @@ body {
 header .topHeader{
   width: 100vw;
   height: 70px;
-  background-color: grey;
+  background-color: white;
+  border-bottom: 1px solid #D6DE23;
   position: fixed;
   top: 0px;
 }
 
 header .navHeader{
   position: fixed;
-  background-color: lightgrey;
+  background-color: #fff;
   width: 100vw;
-  top: 70px;
+  top: 71px;
   height: 40px;
+  border-bottom: 1px solid #D6DE23;
+  /*background-color: #EEF1F6;*/
 }
+
+.logo{
+  width: 200px;
+  height: 60px;
+  margin: 2px;
+}
+
+header .loginButton{
+  top: 20px;
+  right: 150px;
+  position: absolute;
+   background-color: white;
+   border: none;
+   margin: 10px;
+   font-size: 12px;
+   color: #445D7B;
+ }
+ header .createButton{
+   top: 20px;
+   right: 30px;
+   position: absolute;
+    background-color: white;
+    border: none;
+    margin: 10px;
+    font-size: 12px;
+    color: #445D7B;
+  }
+
+header .navButton{
+  background-color: white;
+  border: none;
+  margin: 6px;
+  margin-left: 20px;
+  font-size: 13px;
+  color: #60718D;
+
+ }
+
+ header .navButton:hover{
+   font-size: 14px;
+   color: #445D7B;
+ }
 
 /*Home Page*/
 .wrapper {
-  margin-top: 120px;
+  margin-top: 200px;
+}
+
+.hands{
+  width: 100vw;
+  height: 600px;
 }
 
 /*Items Page*/

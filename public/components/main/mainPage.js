@@ -4,12 +4,12 @@ MainPage = React.createClass({
       <div>
         <header>
           <div className="topHeader">
-            <p>teamFundable</p>
+            <img className="logo" src="twologo.png"/>
             <Link to = '/login'>
-              <button className="navButton">LOG IN</button>
+              <button className="loginButton">Log In</button>
             </Link>
             <Link to = '/createuser'>
-              <button className="navButton">CREATE USER</button>
+              <button className="createButton">Create Account</button>
             </Link>
           </div>
           <div className="navHeader">
