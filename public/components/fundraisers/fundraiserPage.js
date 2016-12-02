@@ -4,6 +4,10 @@ FundraiserPage = React.createClass({
       method: "GET",
       url: "/fundraiser",
       success: function(response){
+        for(var i=0; i<response.length; i++){
+          response[i].dateCreated = moment(response[i].dateCreated).format("MMM. DD, YYYY");
+          response[i].dropDate = moment(response[i].dropDate).format("MMM. DD, YYYY");
+        }
         this.setState({listOfFundraisers: response});
       }.bind(this),
       error: function(xhr, status, err){

@@ -4,6 +4,10 @@ ProjectPage = React.createClass({
       method: "GET",
       url: "/project",
       success: function(response){
+        for(var i=0; i<response.length; i++){
+          response[i].dateCreated = moment(response[i].dateCreated).format("MMM. DD, YYYY");
+          response[i].dropDate = moment(response[i].dropDate).format("MMM. DD, YYYY");
+        }
         this.setState({listOfProjects: response});
       }.bind(this),
       error: function(xhr, status, err){
@@ -102,7 +106,7 @@ ProjectPage = React.createClass({
                 <input onChange={this.updateNewProjectDescription} type="text" placeholder="Project Description"/>
                 <input onChange={this.updateNewProjectEstimatedLabor} type="text" placeholder="Estimated Labor"/>
                 <input onChange={this.updateNewProjectEstimatedCost} type="text" placeholder="Estimated Cost"/>
-                <input onChange={this.updateNewProjectDropDate} type="text" placeholder="Completion Date"/>
+                <input onChange={this.updateNewProjectDropDate} type="date" placeholder="Completion Date"/>
                 <input onChange={this.updateNewProjectImage} type="text" placeholder="Image"/>
                 <button type="submit">Add New Project</button>
             </form>
@@ -121,7 +125,6 @@ ProjectPage = React.createClass({
                       <div className="taskRight">
                       <h4>{project.projectName}</h4>
                       <h5>{project.ProjectDescription}</h5>
-                      <h5>{project.dateCreated}</h5>
                       <h5>{project.estimatedLabor}</h5>
                       <h5>{project.estimatedCost}</h5>
                       <h5>{project.dropDate}</h5></div>
