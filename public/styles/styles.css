@@ -10,6 +10,7 @@ header .topHeader{
   border-bottom: 1px solid #D6DE23;
   position: fixed;
   top: 0px;
+  z-index: 200;
 }
 
 header .navHeader{
@@ -19,6 +20,7 @@ header .navHeader{
   top: 71px;
   height: 40px;
   border-bottom: 1px solid #D6DE23;
+  z-index: 200;
   /*background-color: #EEF1F6;*/
 }
 
@@ -66,12 +68,73 @@ header .navButton{
 
 /*Home Page*/
 .wrapper {
-  margin-top: 200px;
+  margin-top: 102px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+  justify-content:center;
 }
 
 .hands{
   width: 100vw;
-  height: 600px;
+  height: 625px;
+}
+
+/*.tagline {
+  z-index: 100;
+  color: white;
+  font-size: 30px;
+  text-align: left;
+  position: absolute;
+}*/
+
+#line1 {
+  z-index: 100;
+  color: white;
+  font-size: 40px;
+  right: 50px;
+  position: absolute;
+  top: 430px;
+  margin-right: 50px;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px black;
+}
+
+#line2 {
+  z-index: 100;
+  color: white;
+  font-size: 40px;
+  right: 50px;
+  position: absolute;
+  top:480px;
+  margin-right: 50px;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px black;
+}
+
+.homePicBox button {
+  position: absolute;
+  right:100px;
+  top: 600px;
+  background-color: orange;
+  border: none;
+  font-size: 20px;
+  color: white;
+  width: 250px;
+  height: 60px;
+}
+
+#howItWorks {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 80px;
+}
+
+.threeArrowsPic {
+  width: 75vw;
 }
 
 /*Items Page*/
