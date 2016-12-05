@@ -14,24 +14,32 @@ HomePage = React.createClass({
           <img className="threeArrowsPic" src="twoArrows.png"/>
         <div className="tripleBox">
           <div className="leftTripleBox">
-            <p id="tripleBoxTitle"> Community </p>
-            <p>Local organization needs help completing a project </p>
-            <p>Past projects include beautifying public spaces, planting trees, and volunteering at homeless shelters.</p>
+            <p id="tripleBoxTitleLeft"> 1. Community </p>
+            <img id="communityPic" src="parkColor.png"/>
+            <p id="tripleBoxText">Local organization needs help completing a project </p>
+            {/* <p>Past projects include beautifying public spaces, planting trees, and volunteering at homeless shelters.</p>
             <p>Organization posts description of project with Team Fundable</p>
             <p>Team volunteers their services</p>
-            <p>You make it happen by funding the match!</p>
+            <p>You make it happen by funding the match!</p> */}
           </div>
           <div className="middleTripleBox">
-            <p id="tripleBoxTitle"> You </p>
+            <p id="tripleBoxTitleMiddle">2. Teams </p>
+            <img id="teamsPic" src="trophyColor.png"/>
+            <p id="tripleBoxText">Team or club wants to raise money for an upcoming event or goal</p>
           </div>
           <div className="rightTripleBox">
-            <p id="tripleBoxTitle"> Teams </p>
-            <p>want to raise money for an upcoming event </p>
-            <p>This could include Little League trips out of town, school band buying instruments, or Boy Scouts needing new uniforms.</p>
+            <p id="tripleBoxTitleRight">3. <u>You</u></p>
+            <img id="youPic" src="peopleColor.png"/>
+            <p id="tripleBoxText">You provide a donation to the team or club who then completes the community project.</p>
+            <p id="tripleBoxText">Talk about a win-win!</p>
+            {/* <p>This could include Little League trips out of town, school band buying instruments, or Boy Scouts needing new uniforms.</p>
             <p>Teams post the description of their event and what it will take to reach this goal.</p>
             <p>Community Oragnizations are matched with the Teams</p>
-            <p>You make it happen by funding the match!</p>
+            <p>You make it happen by funding the match!</p> */}
           </div>
+        </div>
+        <div className="bigButtonBox">
+          <button>Join teamFundable!</button>
         </div>
       </div>
     );

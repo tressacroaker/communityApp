@@ -43,6 +43,7 @@ header .loginButton{
    border: 1px solid orange;
    border-radius: 3px;
    padding: 10px;
+   cursor: pointer;
  }
 
  header .createButton{
@@ -59,6 +60,7 @@ header .loginButton{
     border: 1px solid orange;
     border-radius: 3px;
     padding: 10px;
+    cursor: pointer;
   }
 
   header .createButton:hover{
@@ -78,6 +80,7 @@ header .navButton{
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 2px;
   color: #60718D;
+  cursor: pointer;
  }
 
  header .navButton:hover{
@@ -135,6 +138,14 @@ header .navButton{
   color: white;
   width: 250px;
   height: 60px;
+  border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.homePicBox button:hover{
+  color: #445D7B;
 }
 
 #howItWorks {
@@ -148,6 +159,9 @@ header .navButton{
 .tripleBox{
   width: 100vw;
   margin: 5px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  background-color: #F5F5F5;
 }
 
 .leftTripleBox{
@@ -156,6 +170,7 @@ header .navButton{
   font-family: 'Open Sans', sans-serif;
   padding-right: 10px;
   padding-left: 10px;
+  text-align: center;
 }
 
 .middleTripleBox {
@@ -164,25 +179,104 @@ header .navButton{
   font-family: 'Open Sans', sans-serif;
   padding-right: 10px;
   padding-left: 10px;
+  text-align: center;
 }
 
 .rightTripleBox{
   float: left;
   width: 30vw;
   font-family: 'Open Sans', sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 40px;
+  padding-right: 30px;
+  text-align: center;
 }
 
 .threeArrowsPic {
   width: 70vw;
   height: 400px;
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 30px;
 }
 
-#tripleBoxTitle {
+#borderLine {
+  border-bottom: 2px solid #445d7b;
+}
+
+#tripleBoxTitleLeft {
+  margin-bottom: 25px;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
+  color: #445d7b;
+}
+
+#communityPic {
+  width: 90px;
+  height: 90px;
+}
+
+#tripleBoxTitleMiddle {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 40px;
+  color: #445d7b
+}
+
+#teamsPic {
+  width: 90px;
+  height: 90px;
+}
+
+#tripleBoxTitleRight u {
+  text-decoration: none;
+  border-bottom: 1px solid #445d7b;
+}
+
+#tripleBoxTitleRight {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 40px;
+  color: #445d7b;
+}
+
+#youPic {
+  width: 90px;
+  height: 90px;
+}
+
+#tripleBoxText {
+  text-align: center;
+  font-size: 22px;
+  color: #445d7b;
+}
+
+#tripleBoxTextRight {
+  text-align: center;
+  font-size: 22px;
+  color: #d6de23;
+}
+
+.bigButtonBox {
+  width: 100vw;
+  height: 100px;
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
+.bigButtonBox button {
+  width: 350px;
+  height: 100px;
+  background-color: #d6de23;
+  color: white;
+  border: none;
+  font-size: 30px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.bigButtonBox button:hover{
+  color: #445D7B;
 }
 
 /*Items Page*/

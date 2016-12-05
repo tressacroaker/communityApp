@@ -4,7 +4,7 @@ MainPage = React.createClass({
       <div>
         <header>
           <div className="topHeader">
-            <img className="logo" src="threePeople.png"/>
+            <img className="logo" src="teamFundableLogo2.png"/>
             <Link to = '/login'>
               <button className="loginButton">Log In</button>
             </Link>
