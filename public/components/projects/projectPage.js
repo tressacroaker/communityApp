@@ -114,20 +114,26 @@ ProjectPage = React.createClass({
 
               {/* <ItemList data={this.state.listOfItems} getItems={this.getItems} /> */}
               {/* <h1><ItemList data={this.state.listOfItems} getItems={this.getItems} /></h1> */}
-              <div className="cards">
-
+              <div className="cardContainer">
                 {this.state.listOfProjects.map(function(project){
                   console.log(project)
                   return(
-                    <div className="task">
-                      <div className="taskLeft">
-                      <img src={project.image}/></div>
-                      <div className="taskRight">
-                      <h4>{project.projectName}</h4>
-                      <h5>{project.ProjectDescription}</h5>
-                      <h5>{project.estimatedLabor}</h5>
-                      <h5>{project.estimatedCost}</h5>
-                      <h5>{project.dropDate}</h5></div>
+                    <div className="project">
+                      <div className="projName">
+                        <h4>{project.projectName}</h4>
+                      </div>
+                      <div className="projInfo">
+                      <div className="projPic">
+                        <img src={project.image}/>
+                      </div>
+                        <p>{project.projectDescription}</p>
+                        <p>Estimated Labor: {project.estimatedLabor}</p>
+                        <p>Estimated Cost: {project.estimatedCost}</p>
+                        <p>Expires: {project.dropDate}</p>
+                      </div>
+                      <div className="projMatchContainer">
+                        <button id="projMatchButton"></button>
+                      </div>
                     </div>
                     )
                 })}

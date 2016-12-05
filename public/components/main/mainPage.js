@@ -28,6 +28,11 @@ MainPage = React.createClass({
         </div>
         </header>
         {this.props.children}
+        <footer>
+          <div className="footer">
+
+          </div>
+        </footer>
       </div>
     );
   }

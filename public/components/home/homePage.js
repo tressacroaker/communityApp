@@ -28,7 +28,7 @@ HomePage = React.createClass({
             <p id="tripleBoxText">Team or club wants to raise money for an upcoming event or goal</p>
           </div>
           <div className="rightTripleBox">
-            <p id="tripleBoxTitleRight">3. <u>You</u></p>
+            <p id="tripleBoxTitleRight">3. You</p>
             <img id="youPic" src="peopleColor.png"/>
             <p id="tripleBoxText">You provide a donation to the team or club who then completes the community project.</p>
             <p id="tripleBoxText">Talk about a win-win!</p>

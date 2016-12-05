@@ -90,6 +90,8 @@ header .navButton{
 /*Home Page*/
 .wrapper {
   margin-top: 130px;
+  width: 100vw;
+  height: max-content;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -226,11 +228,6 @@ header .navButton{
   height: 90px;
 }
 
-#tripleBoxTitleRight u {
-  text-decoration: none;
-  border-bottom: 1px solid #445d7b;
-}
-
 #tripleBoxTitleRight {
   margin-bottom: 25px;
   text-align: center;
@@ -257,7 +254,7 @@ header .navButton{
 
 .bigButtonBox {
   width: 100vw;
-  height: 100px;
+  height: 180px;
   background-color: #F5F5F5;
   text-align: center;
 }
@@ -279,33 +276,60 @@ header .navButton{
   color: #445D7B;
 }
 
-/*Items Page*/
-.cards {
-  width: 100vw;
-  height: auto;
-  border: 1px solid lime;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
+/*Projects Page*/
+.cardContainer {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-content: space-between;
+justify-content: center;
 }
 
-.task {
-    margin: 2%;
-    padding: 2em;
-    background-color: lightgrey;
-    width: 20vw;
-    height: 20vw;
-    border: 1px solid brown;
+.project {
+  width: 470px;
+  height: 600px;
+  border: 1px solid lightgrey;
+  margin: 10px;
 }
 
-.task img{
-    width: 45%;
-    height: 45%;
-    border-radius: 100%;
-    border: 1px solid hotpink;
+.projName {
+  background-color: #445d7b;
+  width: 100%;
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.taskLeft {
+.projName h4 {
+  margin-top: 0;
+  padding-top: 12px;
+}
 
+.projInfo {
+  font-size: 20px;
+  color: #445d7b;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.projPic {
+  text-align: center;
+}
+
+.projPic img {
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.projMatchContainer {
+margin-bottom: 0;
+}
+
+#projMatchButton {
+  width: 100%;
+  height: 50px;
 }
