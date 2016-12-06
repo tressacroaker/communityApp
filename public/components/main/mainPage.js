@@ -22,7 +22,7 @@ MainPage = React.createClass({
           <Link to = '/fundraiserPage'>
             <button className="navButton">Community Teams</button>
           </Link>
-          <Link to = '/matchPage'>
+          <Link to = '/matchedPage'>
             <button className="navButton">Help Fund A Project</button>
           </Link>
         </div>
@@ -30,7 +30,6 @@ MainPage = React.createClass({
         {this.props.children}
         <footer>
           <div className="footer">
-
           </div>
         </footer>
       </div>

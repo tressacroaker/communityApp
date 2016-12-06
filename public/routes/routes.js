@@ -10,6 +10,7 @@ ReactDOM.render(
       <Route path="createneedwork" component={CreateNeedWork}/>
       <Route path="createteam" component={CreateTeam}/>
       <Route path="fundraiserpage" component={FundraiserPage}/>
+      <Route path="matchedpage" component={MatchedPage}/>
       <Route path="failedlogin" component={FailedLogin}/>
     </Route>
   </Router>,

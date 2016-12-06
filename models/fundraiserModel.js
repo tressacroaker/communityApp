@@ -11,8 +11,7 @@ var fundraiserSchema = new mongoose.Schema({
   image: {type: String},
 
   projectId: {type: String},
-  matchedId: {type: String},
-  isMatched: {type: Boolean}
+  matchedId: {type: String}
 });
 
 module.exports = mongoose.model("Fundraiser", fundraiserSchema);

@@ -23,8 +23,7 @@ OneFundraiser = React.createClass({
       fundraiserGoal: this.state.fundraiserGoal,
       image: this.state.image,
       projectId: this.state.projectId,
-      matchedId: this.state.matchedId,
-      isMatched: this.state.isMatched
+      matchedId: this.state.matchedId
     };
       $.ajax ({
         method: "PUT",

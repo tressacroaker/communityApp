@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var passport = require('passport');
 
-
+var matchedCtrl = require('./controllers/matchedCtrl.js');
 var fundraiserCtrl = require('./controllers/fundraiserCtrl.js');
 var projectCtrl = require('./controllers/projectCtrl.js');
 var userCtrl = require('./controllers/userCtrl');
@@ -43,6 +43,11 @@ app.post('/fundraiser',fundraiserCtrl.create);
 app.get('/fundraiser',fundraiserCtrl.read);
 app.put('/fundraiser/:id',fundraiserCtrl.update);
 app.delete('/fundraiser/:id',fundraiserCtrl.delete);
+
+app.post('/matched',matchedCtrl.create);
+app.get('/matched',matchedCtrl.read);
+app.put('/matched/:id',matchedCtrl.update);
+app.delete('/matched/:id',matchedCtrl.delete);
 
 
 

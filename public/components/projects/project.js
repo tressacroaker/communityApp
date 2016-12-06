@@ -23,8 +23,7 @@ OneProject = React.createClass({
       dropDate: this.state.dropDate,
       image: this.state.image,
       fundraiserId: this.state.fundraiserId,
-      matchedId: this.state.matchedId,
-      isMatched: this.state.isMatched
+      matchedId: this.state.matchedId
     };
       $.ajax ({
         method: "PUT",

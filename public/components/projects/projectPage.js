@@ -25,8 +25,7 @@ ProjectPage = React.createClass({
           dropDate: this.state.dropDate,
           image: this.state.image,
           fundraiserId: this.state.fundraiserId,
-          matchedId: this.state.matchedId,
-          isMatched: this.state.isMatched
+          matchedId: this.state.matchedId
         }
         $.ajax({
             method: "POST",
@@ -82,9 +81,20 @@ ProjectPage = React.createClass({
         });
 
     },
+
+    consoleLog: function(projectId){
+      var newMatched = {
+        fundraiserId: "fake user",
+        projectId: projectId,
+        status: "active"
+      }
+      MatchedCrud.post(newMatched);
+    },
+
     componentDidMount: function(){
         this.getProjects();
     },
+
     getInitialState: function(){
         return {
         listOfProjects: [],
@@ -97,7 +107,9 @@ ProjectPage = React.createClass({
         image: ""
         };
     },
+
     render: function(){
+      var self=this;
         return (
           <div className = "wrapper">
             <div className="searchDiv">
@@ -120,8 +132,10 @@ ProjectPage = React.createClass({
               {/* <h1><ItemList data={this.state.listOfItems} getItems={this.getItems} /></h1> */}
               <div className="cardContainer">
                 {this.state.listOfProjects.map(function(project){
-                  console.log(project)
+                  // console.log(project)
+                   CurrentItem = project._id;
                   return(
+
                     <div className="project">
                       <div className="projName">
                         <h4>{project.projectName}</h4>
@@ -136,13 +150,13 @@ ProjectPage = React.createClass({
                         <p>Expires: {project.dropDate}</p>
                       </div>
                       <div className="projMatchContainer">
-                        <button id="projMatchButton">Match Your Team</button>
+                        <button id="projMatchButton" onClick={self.consoleLog.bind(self, project._id)}>Match Your Team Here</button>
                       </div>
                     </div>
                     )
                 })}
               </div>
             </div>
-        );
+          );
     }
 });
