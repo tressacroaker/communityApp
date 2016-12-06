@@ -100,7 +100,7 @@ header .navButton{
   justify-content:center;
 }
 
-.hands{
+.paintPic{
   width: 100vw;
   height: 700px;
   box-shadow: 0 4px 2px -2px #60718D;
@@ -130,6 +130,32 @@ header .navButton{
   text-shadow: 1px 1px black;
 }
 
+/*.homePicBox{
+  margin-bottom: 40px;
+}*/
+
+.afterPaintBox {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  color: #445d7b;
+  margin: 60px;
+}
+
+#whyUs{
+  font-size: 30px;
+  color: orange;
+  text-align: left;
+}
+
+.afterPaintBox span{
+  color: orange;
+}
+
+.afterPaintBox h2 {
+  margin: 50px;
+}
+
 .homePicBox button {
   position: absolute;
   right:100px;
@@ -150,109 +176,115 @@ header .navButton{
   color: #445D7B;
 }
 
-#howItWorks {
-  text-align: center;
-  font-size: 40px;
-  font-family: 'Open Sans', sans-serif;
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-
-.tripleBox{
-  width: 100vw;
-  margin: 5px;
-  margin-top: 60px;
-  margin-bottom: 0;
-  background-color: #F5F5F5;
-}
-
-.leftTripleBox{
-  float: left;
-  width: 30vw;
-  font-family: 'Open Sans', sans-serif;
-  padding-right: 10px;
-  padding-left: 10px;
-  text-align: center;
-}
-
-.middleTripleBox {
-  float: left;
-  width: 30vw;
-  font-family: 'Open Sans', sans-serif;
-  padding-right: 10px;
-  padding-left: 10px;
-  text-align: center;
-}
-
-.rightTripleBox{
-  float: left;
-  width: 30vw;
-  font-family: 'Open Sans', sans-serif;
-  padding-left: 40px;
-  padding-right: 30px;
-  text-align: center;
-}
-
 .threeArrowsPic {
   width: 70vw;
   height: 400px;
   margin-top: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
-#borderLine {
-  border-bottom: 2px solid #445d7b;
+.wrapper  #togetherTitle {
+   width: 100%;
+   text-align: center;
+   border-bottom: 2px solid #d6de23;
+   line-height: 0.1em;
+   margin-bottom: 0;
 }
 
-#tripleBoxTitleLeft {
-  margin-bottom: 25px;
+.wrapper #togetherTitle span {
+    background:#fff;
+    padding:20px;
+    color: #445d7b;
+    border: 2px solid #d6de23;
+    border-radius: 25px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.tripleBox{
+  width: 100%;
+  background-color: #F5F5F5;
   text-align: center;
-  font-size: 40px;
+  padding-top: 70px;
+  z-index: -1;
+}
+
+.box{
+  float: left;
+  width: 25%;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-left: 73px;
+}
+
+.box h2{
+  text-align: center;
+  font-size: 33px;
   color: #445d7b;
 }
 
-#communityPic {
-  width: 90px;
-  height: 90px;
-}
-
-#tripleBoxTitleMiddle {
-  margin-bottom: 25px;
+.box h4{
   text-align: center;
-  font-size: 40px;
-  color: #445d7b
-}
-
-#teamsPic {
-  width: 90px;
-  height: 90px;
-}
-
-#tripleBoxTitleRight {
-  margin-bottom: 25px;
-  text-align: center;
-  font-size: 40px;
+  font-size: 20px;
   color: #445d7b;
 }
 
-#youPic {
-  width: 90px;
-  height: 90px;
-}
-
-#tripleBoxText {
+.box p{
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   color: #445d7b;
 }
 
-#tripleBoxTextRight {
-  text-align: center;
-  font-size: 22px;
-  color: #d6de23;
+.box img{
+  width: 85px;
+  height: 85px;
 }
 
-.bigButtonBox {
+.box button{
+  background-color: #d6de23;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 15px;
+  cursor: pointer;
+  margin-left: 27px;
+  margin-top: 8px;
+}
+
+.box button:hover{
+  color: #445D7B;
+}
+
+.quote{
+  width: 100%;
+  background-color: #F5F5F5;
+  text-align: center;
+  padding-top: 20px;
+  z-index: -1;
+  padding-bottom: 50px;
+  font-size: 12px;
+  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
+  color: #445D7B;
+  box-shadow: 0 4px 2px -2px grey;
+}
+
+.businessLogos{
+  width: 100%;
+  height: auto;
+  margin: 50px;
+  text-align: center;
+}
+
+#busiLogo{
+  /*width: 200px;*/
+  height: 25px;
+  padding-right: 30px;
+}
+
+/*.bigButtonBox {
   width: 100vw;
   height: 180px;
   background-color: #F5F5F5;
@@ -274,9 +306,36 @@ header .navButton{
 
 .bigButtonBox button:hover{
   color: #445D7B;
-}
+}*/
 
 /*Projects Page*/
+
+.searchDiv{
+  width: 80%;
+  height: 150px;
+  background-color: #f5f5f5;
+  margin-bottom: 80px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  color: #445d7b;
+  float: left;
+}
+
+.projSearch{
+  background-color: white;
+  border: none;
+  width: 30%;
+  height: 50px;
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+
 .cardContainer {
 display: flex;
 flex-wrap: wrap;
@@ -287,7 +346,7 @@ justify-content: center;
 
 .project {
   width: 470px;
-  height: 600px;
+  height: 548px;
   border: 1px solid lightgrey;
   margin: 10px;
 }
@@ -295,20 +354,21 @@ justify-content: center;
 .projName {
   background-color: #445d7b;
   width: 100%;
-  height: 60px;
+  height: 50px;
   color: white;
   font-size: 30px;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .projName h4 {
   margin-top: 0;
-  padding-top: 12px;
+  padding-top: 5px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
 }
 
 .projInfo {
-  font-size: 20px;
+  font-size: 18px;
   color: #445d7b;
   padding-left: 20px;
   padding-right: 20px;
@@ -324,12 +384,19 @@ justify-content: center;
   height: 200px;
   margin-top: 20px;
 }
-
+/*
 .projMatchContainer {
 margin-bottom: 0;
-}
+}*/
 
 #projMatchButton {
   width: 100%;
-  height: 50px;
+  height: 40px;
+  margin-bottom: 0;
+  color: #445d7b;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
 }
