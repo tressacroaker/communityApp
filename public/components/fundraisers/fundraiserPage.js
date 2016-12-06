@@ -25,8 +25,7 @@ FundraiserPage = React.createClass({
           fundraiserGoal: this.state.fundraiserGoal,
           image: this.state.image,
           fundraiserId: this.state.fundraiserId,
-          matchedId: this.state.matchedId,
-          isMatched: this.state.isMatched
+          matchedId: this.state.matchedId
         }
         $.ajax({
             method: "POST",

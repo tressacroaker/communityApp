@@ -13,7 +13,6 @@ var userSchema = new mongoose.Schema({
   phone: String,
   projects: [{type: mongoose.Schema.Types.ObjectId, ref: "Projects"}],
   fundraiser: [{type: mongoose.Schema.Types.ObjectId, ref: "Fundraiser"}]
-
 });
 
 userSchema.methods.generateHash = function(password){

@@ -11,8 +11,8 @@ var projectSchema = new mongoose.Schema({
   image: {type: String},
 
   fundraiserId: {type: String},
-  matchedId: {type: String},
-  isMatched: {type: Boolean}
+  matchedId: {type: String}
+
 
 });
 
