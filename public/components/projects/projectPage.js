@@ -101,17 +101,29 @@ ProjectPage = React.createClass({
         return (
           <div className = "wrapper">
             <div className="searchDiv">
+              <div className="leftSearch">
               <h1>Looking for a project?</h1>
               <input className="projSearch" type="search" placeholder="Search by category, location..."/>
             </div>
-            <div>
-            <form onSubmit={this.postProject}>
-                <input onChange={this.updateNewProjectName} type="text" placeholder="Name of Project"/>
-                <input onChange={this.updateNewProjectDescription} type="text" placeholder="Project Description"/>
+            <div className="leftSearch">
+              <h1>Want to add A Service Project?</h1>
+              <button>Add New Project</button>
+            </div>
+          </div>
+
+            <div className="postProjContainer">
+
+            <form className="postProjForm" onSubmit={this.postProject}>
+              <div className="splitForm">
+                <input onChange={this.updateNewProjectName} type="text" placeholder="Name of Project*"/>
+                <input onChange={this.updateNewProjectDescription} type="text" placeholder="Project Description*"/>
+                <input onChange={this.updateNewProjectImage} type="text" placeholder="Image Url"/>
+              </div>
+              <div className="splitForm">
                 <input onChange={this.updateNewProjectEstimatedLabor} type="text" placeholder="Estimated Labor"/>
                 <input onChange={this.updateNewProjectEstimatedCost} type="text" placeholder="Estimated Cost"/>
                 <input onChange={this.updateNewProjectDropDate} type="date" placeholder="Completion Date"/>
-                <input onChange={this.updateNewProjectImage} type="text" placeholder="Image"/>
+              </div>
                 <button type="submit">Add New Project</button>
             </form>
             </div>
