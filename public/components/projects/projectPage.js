@@ -100,6 +100,10 @@ ProjectPage = React.createClass({
     render: function(){
         return (
           <div className = "wrapper">
+            <div className="searchDiv">
+              <h1>Looking for a project?</h1>
+              <input className="projSearch" type="search" placeholder="Search by category, location..."/>
+            </div>
             <div>
             <form onSubmit={this.postProject}>
                 <input onChange={this.updateNewProjectName} type="text" placeholder="Name of Project"/>
@@ -132,7 +136,7 @@ ProjectPage = React.createClass({
                         <p>Expires: {project.dropDate}</p>
                       </div>
                       <div className="projMatchContainer">
-                        <button id="projMatchButton"></button>
+                        <button id="projMatchButton">Match Your Team</button>
                       </div>
                     </div>
                     )
